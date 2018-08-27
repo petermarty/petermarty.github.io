@@ -1,0 +1,107 @@
+/* ---------------------------------------------------------------------
+grid
+- Assumes direct children to be dependants, (just like a happy home)
+--------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------
+grid
+--------------------------------------------------------------------- */
+@media (--medium) {
+    .grid {
+        display: flex;
+    }
+
+    .grid > *,
+    .grid-col {
+        flex: 1 1 auto;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    /* Loop over objects with divided class to set basis and width */
+    @for $i from 1 to 12 {
+        .grid-col_$(i)of12 {
+            flex-basis: calc($i / 12 * 100%);
+            max-width: calc($i / 12 * 100%);
+        }
+    }
+}
+
+/* --------- MIXINS --------- */
+@media (--medium) {
+    .mix-grid_piped > * + * {
+        border-left: 1px solid var(--COLOR_SYSTEM_LIGHT_GREY);
+    }
+}
+
+@media (--medium) {
+    .mix-grid_gutters > * {
+        padding: 0 calc(var(--COLUMN_SPACING) / 2);
+        box-sizing: border-box;
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+.mix-grid_gutters > * + * {
+    margin-top: var(--GLOBAL_SPACING);
+    @media (--medium) {
+        margin-top: 0;
+    }
+}
+
+@media (--medium) {
+    .mix-grid_flip {
+        flex-direction: row-reverse;
+    }
+}
+
+@media (--medium) {
+    .mix-grid_gutterFlip {
+        flex-direction: row-reverse;
+    }
+}
+
+@media (--medium) {
+    .mix-grid_gutterFlip > * {
+        box-sizing: border-box;
+        padding: 0 calc(var(--COLUMN_SPACING) / 2);
+        &:first-child {
+            padding-right: 0; /* opposite of DOM order for flip; I know, it's gross */
+        }
+        &:last-child {
+            padding-left: 0; /* opposite of DOM order for flip; I know, it's gross */
+        }
+    }
+}
+
+.mix-grid_gutterFlip > * + * {
+    margin-top: var(--GLOBAL_SPACING);
+    @media (--medium) {
+        margin-top: 0; /* Resets base */
+    }
+}
+
+.mix-grid_right {
+    justify-content: flex-end;
+}
+
+.mix-grid_split {
+    justify-content: space-between;
+}
+
+.mix-grid_alignMiddle {
+    align-items: center;
+}
+
+.mix-grid_alignBottom {
+    align-items: flex-end;
+}
+
+/* Only use where flipped content is irrelevant to accessibility, such as an image that has no meaning */
+.mix-grid_flip {
+    flex-direction: row-reverse;
+}

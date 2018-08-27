@@ -1,0 +1,39 @@
+/* ---------------------------------------------------------------------
+fonts
+* Font weights unspecified herein. Specify weights in their respective CSS
+------------------------------------------------------------------------ */
+@font-face {
+    font-family: "Roboto";
+    /* Regular Weight - 400 */
+    src: url("../media/fonts/Roboto-Regular.eot") format("embeddedopentype"), /* IE9 Compat Modes */
+    url("../media/fonts/Roboto-Regular.otf") format("opentype"), /* Open Type Font */
+    url("../media/fonts/Roboto-Regular.svg") format("svg"), /* Legacy iOS */
+    url("../media/fonts/Roboto-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../media/fonts/Roboto-Regular.woff") format("woff"), /* Modern Browsers */
+    url("../media/fonts/Roboto-Regular.woff2") format("woff2"), /* Modern Browsers */
+    /* Bold Weight - 700 */
+    url("../media/fonts/Roboto-Bold.eot") format("embeddedopentype"), /* IE9 Compat Modes */
+    url("../media/fonts/Roboto-Bold.otf") format("opentype"), /* Open Type Font */
+    url("../media/fonts/Roboto-Bold.svg") format("svg"), /* Legacy iOS */
+    url("../media/fonts/Roboto-Bold.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../media/fonts/Roboto-Bold.woff") format("woff"), /* Modern Browsers */
+    url("../media/fonts/Roboto-Bold.woff2") format("woff2"), /* Modern Browsers */
+    /* Italic - 400 */
+    url("../media/fonts/Roboto-Italic.eot") format("embeddedopentype"), /* IE9 Compat Modes */
+    url("../media/fonts/Roboto-Italic.otf") format("opentype"), /* Open Type Font */
+    url("../media/fonts/Roboto-Italic.svg") format("svg"), /* Legacy iOS */
+    url("../media/fonts/Roboto-Italic.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../media/fonts/Roboto-Italic.woff") format("woff"), /* Modern Browsers */
+    url("../media/fonts/Roboto-Italic.woff2") format("woff2"); /* Modern Browsers */
+}
+
+@font-face {
+    font-family: "Montserrat";
+    /* Regular Weight - 400 */
+    src: url("../media/fonts/Montserrat-Regular.eot") format("embeddedopentype"), /* IE9 Compat Modes */
+    url("../media/fonts/Montserrat-Regular.otf") format("opentype"), /* Open Type Font */
+    url("../media/fonts/Montserrat-Regular.svg") format("svg"), /* Legacy iOS */
+    url("../media/fonts/Montserrat-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../media/fonts/Montserrat-Regular.woff") format("woff"), /* Modern Browsers */
+    url("../media/fonts/Montserrat-Regular.woff2") format("woff2"); /* Modern Browsers */
+}

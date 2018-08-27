@@ -1,0 +1,25 @@
+<head>
+    <!-- META DATA -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--[if IE]><meta http-equiv="cleartype" content="on" /><![endif]-->
+
+    <!-- SEO -->
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    {% include favicon.html %}
+    <meta name="author" content="Peter Marty" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="{{ site.description }}">
+
+    <!-- VERIFICATION -->
+    <!--<meta name="google-site-verification" content="8dEmvmtX4pb4J7eF_saQhNLN0HSC1fnqyuHV_fckpRU" />-->
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="{{ "/assets/styles/styles.css" | prepend: site.baseurl }}">
+
+    <script>
+        (function() {document.documentElement.className = document.documentElement.className.replace('no-js', 'js');}())
+    </script>
+</head>

@@ -1,0 +1,25 @@
+/* ---------------------------------------------------------------------
+u-box
+------------------------------------------------------------------------ */
+.u-box {
+    box-sizing: border-box; /* Box model - contains height 100% */
+    padding: var(--GLOBAL_SPACING);
+    height: 100%;
+}
+
+.u-boxBottomless {
+    padding-top: var(--GLOBAL_SPACING);
+    @media (--medium) {
+        box-sizing: border-box; /* Box model - contains height 100% */
+        height: 100%;
+        padding: var(--GLOBAL_SPACING) var(--GLOBAL_SPACING) 0 var(--GLOBAL_SPACING);
+    }
+}
+
+@media (--medium) {
+    .u-boxMidAlign {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+}

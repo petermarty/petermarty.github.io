@@ -1,0 +1,56 @@
+<div class="globalFooter u-vr_x2">
+    <div class="grid mix-grid_piped u-vr_x3">
+        <div class="grid-col grid-col_6of12 u-boxBottomless">
+            <h2 class="u-textWeightBold u-textColorBrand u-textFontSizeSmall u-vr_x1">Peter Marty Design</h2>
+
+            <div class="u-textFontSizeXSmall">
+                <p>We are problem solvers and solution builders of beautiful, useable, digital experiences, and we have tons of fun doing it&excl;</p>
+                <p>
+                    <a href="https://www.w3.org/WAI/WCAG2AA-Conformance"
+                      title="Explanation of WCAG 2.0 Level Double-A Conformance">
+                      <img height="32" width="88" src="/assets/media/images/icons/wcag2AA.svg" alt="Level Double-A conformance, W3C WAI Web Content Accessibility Guidelines 2.0">
+                    </a>
+                    <div>We adhere to WCAG 2.0 Level AA Accessibility Conformance.</div>
+                </p>
+            </div>
+
+        </div>
+        <div class="grid-col grid-col_6of12 u-boxBottomless">
+            <div class="u-vr_x1">
+                <h2 class="u-textWeightBold u-textColorBrand u-textFontSizeSmall u-vr_x1">Contact</h2>
+                <ul class="vList u-textFontSizeXSmall">
+                    <li>
+                        <span class="u-textWeightBold">Phone:</span> <a href="tel:+6126154996">612&bull;615&bull;4996</a>
+                    </li>
+                    <li>
+                        <span class="u-textWeightBold">Email:</span> <a href="mailto:peter@petermarty.design" itemprop="email">peter@petermarty.design</a>
+                    </li>
+                    <li>
+                        <span class="u-textWeightBold">Address:</span>
+                        1350 Lagoon Ave, Minneapolis, Minnesota 55408
+                    </li>
+                </ul>
+            </div>
+            <h3 class="u-isVisuallyHidden">Peter Marty elsewhere on the internet</h3>
+            <ul class="hList" role="navigation" aria-label="social navigation" itemtype="http://schema.org/SiteNavigationElement">
+                {% for icon in site.data.icons %}
+                {% if icon.type == "social" %}
+                <li>
+                    <a href="{{ icon.link }}">
+                        <svg class="icon icon_social {{ icon.iconClass }}" version="1.1" viewBox="{{ icon.viewBox }}"
+                             preserveAspectRatio="xMidYMid meet" aria-labelledby="{{ icon.label }}" role="img">
+                            <title id="{{ icon.name }}">{{ icon.name }}</title>
+                            <g>
+                                {{ icon.svgPath }}
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul> <!-- /.hList -->
+        </div>
+    </div> <!-- /.grid -->
+    <small role="contentinfo">&copy; {{ site.time | date: '%Y' }} Peter Marty Design, Minneapolis, MN</small>
+</div> <!-- /.globalFooter -->
+{% include scripts.html %}

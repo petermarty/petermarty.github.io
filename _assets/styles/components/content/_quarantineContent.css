@@ -1,0 +1,441 @@
+/* ---------------------------------------------------------------------
+ quarantineContent
+------------------------------------------------------------------------ */
+/*
+ * Clearfix
+ * Always clear unknown content wherein may contain a float
+*/
+
+.quarantineContent:before,
+.quarantineContent:after {
+    content: " ";
+    display: table;
+}
+
+.quarantineContent:after {
+    clear: both;
+}
+
+/* Baseline */
+
+.quarantineContent {
+    @apply --FONT_SIZE_TEXT_MEDIUM_TO_LARGE;
+    color: inherit; /* inherit basic styles from it's parent */
+    font-family: inherit; /* inherit basic styles from it's parent */
+    font-style: inherit;
+    line-height: inherit;
+    word-wrap: break-word; /* break line for lengthy words */
+}
+
+.quarantineContent > *:first-child {
+    margin-top: 0 !important; /* !important to override inheritance from ancestors */
+}
+
+.quarantineContent > *:last-child {
+    margin-bottom: 0 !important; /* !important to override inheritance from ancestors */
+}
+
+/*
+ * Embedded Content & Media
+ * All media elements set to max-width 100% to prevent it from overflowing it's container
+*/
+
+.quarantineContent img,
+.quarantineContent iframe,
+.quarantineContent embed,
+.quarantineContent object,
+.quarantineContent video,
+.quarantineContent audio,
+.quarantineContent canvas,
+.quarantineContent picture {
+    max-width: 100% !important; /* !important to override inheritance from ancestors */
+}
+
+/* If a media element does not have a container, add margin below it to keep the flow intact */
+.quarantineContent > img,
+.quarantineContent > iframe,
+.quarantineContent > embed,
+.quarantineContent > object,
+.quarantineContent > video,
+.quarantineContent > audio,
+.quarantineContent > canvas,
+.quarantineContent > picture {
+    display: inline-block;
+    margin-bottom: var(--GLOBAL_SPACING); /* Since no wrapper classes for vertical rhythm are allowed */
+}
+
+/* Anchors */
+
+.quarantineContent a:link {
+    color: var(--COLOR_SYSTEM_LIGHT_GREY);
+    font-weight: var(--FONT_WEIGHT_NORMAL);
+    text-decoration: none;
+}
+
+.quarantineContent a:focus,
+.quarantineContent a:hover {
+    color: var(--COLOR_SYSTEM_BLACK);
+    text-decoration: none;
+}
+
+.quarantineContent a h1,
+.quarantineContent a h2,
+.quarantineContent a h3,
+.quarantineContent a h4 {
+    color: var(--COLOR_BRAND_PRIMARY);
+}
+
+.quarantineContent svg {
+    pointer-events: none;
+}
+
+/* Paragraphs */
+
+.quarantineContent p,
+.quarantineContent > p:last-child {
+    margin-bottom: var(--GLOBAL_SPACING) !important; /* Since no wrapper classes for vertical rhythm are allowed */
+}
+
+.quarantineContent > * + p {
+    margin-top: var(--GLOBAL_SPACING);
+}
+
+/* Headings */
+
+.quarantineContent h1,
+.quarantineContent h2,
+.quarantineContent h3,
+.quarantineContent h4,
+.quarantineContent h5,
+.quarantineContent h6 {
+    @apply --FONT_FAMILY_PRIMARY;
+    color: var(--COLOR_SYSTEM_BLACK);
+}
+
+.quarantineContent h1 {
+    font-size: var(--FONT_SIZE_TEXT_XXLARGE);
+}
+
+.quarantineContent h2 {
+    font-size: var(--FONT_SIZE_TEXT_XLARGE);
+}
+
+.quarantineContent h3 {
+    @apply --FONT_SIZE_TEXT_LARGE;
+    color: var(--COLOR_SECONDARY_STORMY_GREY);
+}
+
+.quarantineContent h4 {
+    @apply --FONT_SIZE_TEXT_LARGE;
+}
+
+.quarantineContent h1 a,
+.quarantineContent h2 a,
+.quarantineContent h3 a,
+.quarantineContent h4 a {
+    color: inherit !important; /* Removes inherited link styles and use !important to override inheritance from ancestors */
+}
+
+/*
+ Blockquote
+ 1. Push content away from the horizontal rule more than the normal spacing
+ 2. Border inherits color from text color
+========================================================================== */
+
+.quarantineContent blockquote {
+    display: block;
+    padding-right: var(--GLOBAL_SPACING);
+    padding-left: var(--GLOBAL_SPACING);
+    position: relative;
+    font-style: italic;
+}
+
+/* Address */
+
+.quarantineContent address {
+    margin-bottom: var(--GLOBAL_SPACING);
+    font-style: italic;
+}
+
+/* Horizontal Rule */
+.quarantineContent hr {
+    margin-top: var(--GLOBAL_SPACING);
+    margin-bottom: var(--GLOBAL_SPACING);
+    height: 1px;
+    border: none; /* Remove borders for maximum browser support */
+    background: var(--COLOR_SYSTEM_CHARCOAL_GREY); /* Set the color of the horizontal rule as both color and background-color for maximum browser support */
+    color: var(--COLOR_SYSTEM_CHARCOAL_GREY);
+    line-height: 1px; /* Assures height does not exceed 1px */
+    font-size: 1px; /* Assures height does not exceed 1px */
+}
+
+/*
+ * Inline Text
+ * Mimics browsers as close as possible while maintaining cross browser consistency
+ * Includes some invalid legacy elements as they may be added by older WYSIWYG editors
+*/
+.quarantineContent strong,
+.quarantineContent b {
+    font-weight: var(--FONT_BOLD);
+}
+
+.quarantineContent em,
+.quarantineContent i {
+    font-style: italic;
+}
+
+.quarantineContent del,
+.quarantineContent strike,
+.quarantineContent s {
+    text-decoration: line-through;
+}
+
+.quarantineContent u,
+.quarantineContent ins {
+    text-decoration: underline;
+}
+
+.quarantineContent sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+.quarantineContent sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+
+.quarantineContent big {
+    font-size: larger;
+}
+
+.quarantineContent small {
+    font-size: smaller;
+}
+
+.quarantineContent abbr,
+.quarantineContent acronym {
+    border-bottom: 1px dotted;
+}
+
+.quarantineContent cite,
+.quarantineContent dfn {
+    font-style: italic;
+}
+
+.quarantineContent q {
+    font-style: italic;
+}
+
+.quarantineContent q::before {
+    content: open-quote;
+}
+
+.quarantineContent q::after {
+    content: close-quote;
+}
+
+.quarantineContent q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+.quarantineContent bdo,
+.quarantineContent bdi {
+    direction: rtl;
+}
+
+.quarantineContent blink {
+    text-decoration: blink;
+}
+
+/* Lists */
+.quarantineContent ul,
+.quarantineContent ol,
+.quarantineContent dl {
+    margin-bottom: var(--GLOBAL_SPACING);
+}
+
+.quarantineContent ul li,
+.quarantineContent ol li,
+.quarantineContent dl li {
+    margin-bottom: calc(var(--GLOBAL_SPACING)/2);
+}
+
+.quarantineContent ul {
+    list-style-type: disc;
+}
+
+.quarantineContent li ul,
+.quarantineContent li ol,
+.quarantineContent li dl {
+    margin-left: var(--GLOBAL_SPACING);
+}
+
+.quarantineContent ol {
+    margin-left: var(--GLOBAL_SPACING);
+    list-style-type: decimal;
+}
+
+.quarantineContent dt {
+    font-weight: var(--FONT_BOLD);
+}
+
+.quarantineContent li,
+.quarantineContent dd {
+    margin-left: calc(1.5*var(--GLOBAL_SPACING)); /* Indent lists and leave room for the list item mark */
+}
+
+
+/* Nested lists have no bottom margin */
+.quarantineContent ul ul,
+.quarantineContent ul ol,
+.quarantineContent ul dl,
+.quarantineContent ol ul,
+.quarantineContent ol ol,
+.quarantineContent ol dl,
+.quarantineContent dl ul,
+.quarantineContent dl ol,
+.quarantineContent dl dl {
+    margin-bottom: 0;
+}
+
+.quarantineContent ol ul,
+.quarantineContent ul ul {
+    list-style-type: circle;
+}
+
+/* Super Nested Madness */
+.quarantineContent ol ol ul,
+.quarantineContent ol ul ul,
+.quarantineContent ul ol ul,
+.quarantineContent ul ul ul {
+    list-style-type: square;
+}
+
+/* Tables */
+
+.quarantineContent table {
+    width: 100% !important; /* Will not overflow parent container and will always use 100% of the container and use !important to override inheritance from ancestors */
+    margin-bottom: var(--GLOBAL_SPACING);
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.quarantineContent caption {
+    text-align: right;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.quarantineContent tr {
+    vertical-align: middle;
+}
+
+
+.quarantineContent tbody tr:nth-child(odd) {
+    background-color: #efefef;
+}
+
+.quarantineContent tbody {
+    vertical-align: middle;
+}
+
+.quarantineContent tbody td,
+.quarantineContent tbody th {
+    min-height: 55px;
+    padding: 15px 20px;
+}
+
+.quarantineContent tbody a {
+    font-weight: var(--FONT_SEMI_BOLD);
+}
+
+.quarantineContent thead {
+    vertical-align: middle;
+}
+
+.quarantineContent thead td,
+.quarantineContent thead th {
+    font-weight: 700;
+}
+
+.quarantineContent tfoot {
+    vertical-align: middle;
+}
+
+.quarantineContent td {
+    padding: 10px 20px;
+    vertical-align: top;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.2;
+}
+
+.quarantineContent th {
+    padding: 10px 20px;
+    vertical-align: top;
+    text-align: left;
+    @apply --FONT_SIZE_TEXT_MEDIUM;
+    line-height: 1.2;
+    background-color: transparent;
+}
+
+/*
+ * Form Elements
+ *
+*/
+
+.quarantineContent label {
+    @apply --FONT_SIZE_TEXT_MEDIUM;
+    font-weight: var(--FONT_SEMI_BOLD);
+}
+
+/*
+ * Computer Output
+ * `code` styles get reset when `code` is nested inside `pre`
+*/
+
+.quarantineContent pre {
+    margin-top: var(--GLOBAL_SPACING);
+    margin-bottom: var(--GLOBAL_SPACING);
+    padding: var(--GLOBAL_SPACING);
+    border: 1px solid var(--COLOR_SECONDARY_SLATE_GREY);
+    background-color: #f8f8f8;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 14px;
+    border-radius: 2px;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+.quarantineContent code {
+    display: inline-block;
+    padding: 2px 6px;
+    border: 1px solid var(--COLOR_SECONDARY_SLATE_GREY);
+    background-color: #f8f8f8;
+    color: #dd1144; /* Whacky Pink */
+    font-size: 14px;
+    border-radius: 2px;
+}
+
+.quarantineContent pre code {
+    display: block;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    font-size: inherit;
+    color: inherit;
+    border-radius: 0;
+}
+
+.quarantineContent code,
+.quarantineContent samp,
+.quarantineContent tt,
+.quarantineContent kbd,
+.quarantineContent var {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+.quarantineContent var {
+    font-style: italic;
+}

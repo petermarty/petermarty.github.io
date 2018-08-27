@@ -1,0 +1,45 @@
+---
+layout: default
+title: Portfolio Case Studies
+description: "Portfolio of Peter Marty's featured project work"
+navigation_title: "Portfolio"
+weight : 2
+---
+<div class="u-container u-vrInverse_x4">
+    <div class="u-containerSlim u-textAlignCenter u-vr_x4">
+        <h1 class="u-textPageHeadingH1 u-vr_x4">{{ page.navigation_title }}</h1>
+
+        <p class="u-vr_x0">We have worked on over a hundred projects spanning many industries &mdash; <span class="u-textWeightBold">Shown upon request</span>. Here&apos;s a few select projects that we are proud of.</p>
+    </div>
+
+    <ul class="vList mix-vList_bordered">
+    {% for portfolio in site.data.portfolio %}
+        <li class="u-specialEffectBorderRadius">
+            <a class="u-textDecorationNoUnderline u-textColorDarkComplete u-specialEffectShadow" href="{{ portfolio.url | prepend: site.baseurl }}">
+                <div class="media media_equalSplit">
+                    <div class="media-feature">
+                        <img src="{{ portfolio.featured_image }}" alt="{{ portfolio.featured_image_alt }}" />
+                    </div>
+                    <div class="media-bd">
+                        <div class="feature">
+                            <div class="feature-meta u-textMetaData">{{portfolio.type}}</div>
+                            <div class="feature-bd">
+                                <h2 class="u-textPageHeadingH3 u-vr_x1">{{ portfolio.name }}</h2>
+                                <div class="u-textFontSizeSmall u-textLineHeightTall">
+                                    {{ portfolio.excerpt }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+
+    <div class="u-textAlignCenter u-vrInverse_x8">
+        <h2 class="u-textPageHeadingH2">More project case studies are being built as you read this.</h2>
+        <p class="u-textFontSizeLarge">Project lists shown upon request &mdash; Or better yet, give us a ring <a href="tel:6126154996">612&hyphen;615&hyphen;4996</a>.</p>
+    </div>
+
+</div>

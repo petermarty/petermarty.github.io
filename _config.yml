@@ -1,0 +1,39 @@
+# Site settings
+title: Peter Marty Design
+email: peter@petermarty.design
+description: "Peter Marty Design"
+baseurl: ""
+url: https://petermarty.design
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+highlight: pygments
+
+# Collections
+collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
+  posts:
+      output: true
+      permalink: /blog/:title/
+
+# Files to exclude from build
+exclude: [
+          "_assets",
+          build.cmd,
+          build.sh,
+          docs/,
+          env/,
+          "Gemfile",
+          "Gemfile.lock",
+          gulpfile.js,
+          node_modules/,
+          node-install.cmd,
+          node-install.sh,
+          package.json,
+          package-lock.json,
+          tools/,
+          tasks/
+          ]

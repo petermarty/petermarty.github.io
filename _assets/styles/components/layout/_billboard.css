@@ -1,0 +1,59 @@
+/* ---------------------------------------------------------------------
+billboard
+---------------------------------------------------------------------- */
+/* Configurable vars */
+:root {
+    --billboard_MAX_HEIGHT: 460px;
+}
+
+@custom-media --billboard_FIRST_MICRO (width >= 680px);
+@custom-media --billboard_SECOND_MICRO (width >= 1180px);
+
+.billboard {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.billboard-cta {
+    align-items: center;
+    background-color: var(--COLOR_SYSTEM_OPAQUE);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: var(--GLOBAL_SPACING);
+    text-align: center;
+    width: 100%;
+    z-index: 99;
+    @media (--medium) {
+        padding: calc(var(--GLOBAL_SPACING) * 2) var(--GLOBAL_SPACING);
+    }
+}
+
+.billboard-media {
+    background: var(--COLOR_SYSTEM_OPAQUE); /* change to inline */
+    margin: 0 auto;
+    max-height: var(--billboard_MAX_HEIGHT);
+    overflow: hidden; /* when img exceeds max-height */
+    position: relative; /* reference for pseudo */
+    width: 100%;
+}
+
+.billboard-media_fullWidth img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/*----- MIXINS -----*/
+.mix-billboard-media_overlay:before {
+    background-color: rgba(0, 0, 0, 0.7);
+    content: '';
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}

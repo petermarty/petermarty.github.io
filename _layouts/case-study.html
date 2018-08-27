@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    {% include head.html %}
+    <body itemscope itemtype="http://schema.org/WebPage">
+        <div class="page page_bordered">
+
+            <header class="page-hd" role="banner">
+                <a class="u-isVisuallyHidden" href="#mainContent">Skip to main content</a>
+                {% include header.html %}
+            </header> <!-- ./page-hd -->
+
+            <div class="page-bd">
+                <main role="main">
+                    <div id="mainContent">
+
+                        <div class="billboard u-vr_x2">
+                            <div class="billboard-cta">
+                                <h1 class="u-textPageHeadingH1">{{ page.heading }}</h1>
+                            </div>
+                            <div class="billboard-media billboard-media_fullWidth">
+                                <img src="{{ page.hero }}" alt="{{ page.hero_alt }}">
+                            </div>
+                        </div>
+
+                    <div class="u-container">
+                        <div class="u-vr_x6">
+                            {% include breadcrumbs.html %}
+                        </div>
+
+                        {{ content }}
+                    </div>
+
+                    </div>
+                </main>
+            </div> <!-- ./page-bd -->
+
+            <footer class="page-ft u-container">
+                {% include footer.html %}
+            </footer> <!-- ./page-ft -->
+
+        </div> <!-- ./page -->
+    </body>
+</html>

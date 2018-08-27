@@ -1,0 +1,66 @@
+/* ---------------------------------------------------------------------
+page
+------------------------------------------------------------------------ */
+/* Configurable vars */
+:root {
+    --page_HEADER_HEIGHT: 60px;
+}
+
+.page {
+    background-color: var(--COLOR_SYSTEM_OPAQUE);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* set to height of window for fixed footer positioning */
+    overflow: auto;
+    position: relative; /* Reference for pseudo element styling */
+    @media screen and (-ms-high-contrast: none) {
+        height: 100vh;  /* resolves the IE11 flexbox render error with using flex grow */
+    }
+}
+
+.page-hd {
+    background-color: var(--COLOR_SYSTEM_LIGHTEST_GREY);
+    border-bottom: 1px solid var(--COLOR_SYSTEM_LIGHT_GREY);
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: var(--ZINDEX_FIXED_PAGE_HD); /* set under page-bd object */
+    &::before {
+        animation: gradientAnimation 3s linear infinite;
+        background: var(--COLOR_FLARE_GRADIENT);
+        background-size: 400% 400%;
+        content: "";
+        height: 10px;
+        left: 0;
+        right: 0;
+        top: 0;
+        position: absolute; /* according to base object positioning */
+        width: 100%;
+    }
+}
+
+.page-bd {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto; /* Take up any available space so the footer is fixed at the bottom of the page */
+    margin-top: var(--page_HEADER_HEIGHT);
+    z-index: var(--ZINDEX_FIXED_PAGE_BD); /* set over page-hd object */
+    @media print {
+        width: 100%;
+        background: transparent; /* overwrites images and colors */
+    }
+}
+
+.page-ft {
+    padding-top: var(--GLOBAL_SPACING);
+    @media (--medium) {
+        padding-top: calc(var(--GLOBAL_SPACING) * 3);
+    }
+}
+
+@keyframes gradientAnimation {
+    0%{background-position:0 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0 50%}
+}

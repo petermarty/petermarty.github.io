@@ -1,0 +1,252 @@
+/* ---------------------------------------------------------------------
+u-text
+ * text modification Utilities
+------------------------------------------------------------------------ */
+
+/* Text Transform */
+/* ------------------------------------------- */
+
+.u-textTransformUpper {
+    text-transform: uppercase;
+}
+
+/* Line Height */
+/* ------------------------------------------- */
+.u-textLineHeightHigh {
+    line-height: 1.6;
+}
+
+/* Text Colors */
+/* ------------------------------------------- */
+.u-textColorOpaque {
+    color: rgb(255, 255, 255);
+}
+
+.u-textColorLight {
+    color: var(--COLOR_SYSTEM_LIGHT_GREY);
+}
+
+.u-textColorMedium {
+    color: var(--COLOR_SYSTEM_MEDIUM_GREY);
+}
+
+.u-textColorDark {
+    color: var(--COLOR_SYSTEM_TEXT_GREY);
+}
+
+.u-textColorDarkComplete {
+    color: var(--COLOR_SYSTEM_TEXT_GREY);
+    &:hover {
+        color: var(--COLOR_SYSTEM_TEXT_GREY);
+    }
+}
+
+.u-textColorDarkest {
+    color: var(--COLOR_SYSTEM_BLACK);
+}
+
+.u-textColorBrand {
+    color: var(--COLOR_BRAND_PRIMARY);
+}
+
+/* Text Display */
+/* ------------------------------------------- */
+.u-textDisplayBlock {
+    display: block;
+}
+
+/* Font Family */
+/* ------------------------------------------- */
+
+.u-textFontFamilyPrimary {
+    @apply --FONT_FAMILY_PRIMARY;
+}
+
+.u-textFontFamilySecondary {
+    @apply --FONT_FAMILY_SECONDARY;
+}
+
+/* Font Weight */
+/* ------------------------------------------- */
+
+.u-textWeightRegular {
+    font-weight: 400;
+}
+
+.u-textWeightBold {
+    font-weight: 700;
+}
+
+/* Font Style */
+/* ------------------------------------------- */
+
+.u-textStyleItalic {
+    font-style: italic;
+}
+
+.u-textStyleNormal {
+    font-style: normal;
+}
+
+.u-textDecorationNoUnderline {
+    text-decoration: none;
+}
+
+.u-textDecorationUnderline {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    position: relative;
+    color: var(--COLOR_SYSTEM_TEXT_GREY);
+    &:after {
+        content: '';
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: var(--COLOR_SYSTEM_TEXT_GREY);
+    }
+}
+
+/* Text Alignment */
+/* ------------------------------------------- */
+
+.u-textAlignCenter {
+    text-align: center;
+}
+
+.u-textAlignRight {
+    text-align: right;
+}
+
+/* Line Height */
+/* ------------------------------------------- */
+
+.u-textLineHeightShort {
+    line-height: 1;
+}
+
+.u-textLineHeightMedium {
+    line-height: 1.2;
+}
+
+.u-textLineHeightRegular {
+    line-height: 1.4;
+}
+
+.u-textLineHeightTall {
+    line-height: 1.8;
+}
+
+/* Letter Spacing */
+/* ------------------------------------------- */
+.u-textLetterSpacingMedium {
+    letter-spacing: 2px;
+}
+
+/* Font Size */
+/* ------------------------------------------- */
+
+/* Small */
+.u-textFontSizeXXSmall {
+    font-size: var(--FONT_SIZE_TEXT_XXSMALL);
+}
+
+.u-textFontSizeXXSmallToSmall {
+    @apply --FONT_SIZE_TEXT_XXSMALL_TO_SMALL;
+}
+
+.u-textFontSizeXSmall {
+    font-size: var(--FONT_SIZE_TEXT_XSMALL);
+}
+
+/* Small and its variants */
+.u-textFontSizeSmall {
+    font-size: var(--FONT_SIZE_TEXT_SMALL);
+}
+
+.u-textFontSizeSmallToLarge {
+    @apply --FONT_SIZE_TEXT_SMALL_TO_LARGE;
+}
+
+.u-textFontSizeSmallToXLarge {
+    @apply --FONT_SIZE_TEXT_SMALL_TO_XLARGE;
+}
+
+/* Medium and its variants */
+.u-textFontSizeMedium {
+    font-size: var(--FONT_SIZE_TEXT_MEDIUM);
+}
+
+.u-textFontSizeXSmallToMedium {
+    font-size: var(--FONT_SIZE_TEXT_XSMALL_TO_MEDIUM);
+}
+
+.u-textFontSizeSmallToMedium {
+    font-size: var(--FONT_SIZE_TEXT_SMALL_TO_MEDIUM);
+}
+
+.u-textFontSizeMediumToLarge {
+    @apply --FONT_SIZE_TEXT_MEDIUM_TO_LARGE;
+}
+
+.u-textFontSizeMediumToXLarge {
+    @apply --FONT_SIZE_TEXT_MEDIUM_TO_XLARGE;
+}
+
+/* Large and its variants */
+.u-textFontSizeLarge {
+    font-size: var(--FONT_SIZE_TEXT_LARGE);
+}
+
+/* XLarge and its variants */
+.u-textFontSizeXLarge {
+    font-size: var(--FONT_SIZE_TEXT_XLARGE);
+}
+
+/* XXLarge and its variants */
+.u-textFontSizeXXLarge {
+    font-size: var(--FONT_SIZE_TEXT_XXLARGE);
+}
+
+.u-textFontSizeXLargeToXXLarge {
+    @apply --FONT_SIZE_TEXT_XLARGE_TO_XXLARGE;
+}
+
+.u-textFontSizeLargeToXXLarge {
+    @apply --FONT_SIZE_TEXT_LARGE_TO_XXLARGE;
+}
+
+/* XXXLarge and its variants */
+.u-textFontSizeXLargeToXXXLarge {
+    @apply --FONT_SIZE_TEXT_XLARGE_TO_XXXLARGE;
+}
+
+/* Font Objects */
+/* -- Common patterns seen globally
+/* -- Daisy chained objects from within this utility
+/* object only
+/* ------------------------------------------- */
+
+.u-textPageHeadingH1 {
+    @apply --FONT_SIZE_TEXT_XLARGE_TO_XXXLARGE;
+    color: var(--COLOR_BRAND_PRIMARY);
+    text-align: center;
+}
+
+.u-textPageHeadingH2 {
+    @apply --FONT_SIZE_TEXT_LARGE_TO_XXLARGE;
+    color: var(--COLOR_BRAND_PRIMARY);
+}
+
+.u-textPageHeadingH3 {
+    @apply --FONT_SIZE_TEXT_MEDIUM_TO_LARGE;
+    color: var(--COLOR_BRAND_PRIMARY);
+}
+
+.u-textMetaData {
+    @inherit: .u-textFontSizeXSmall;
+    /* Declaration objects that carry > 1 style */
+    @inherit: .u-textFontFamilySecondary;
+}

@@ -1,0 +1,16 @@
+/* ---------------------------------------------------------------------
+u-clearFix
+------------------------------------------------------------------------ */
+.u-clearFix:before,
+.u-clearFix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.u-clearFix:after {
+    clear: both;
+}
+
+.u-clearFixOverflow {
+	overflow: hidden;
+}

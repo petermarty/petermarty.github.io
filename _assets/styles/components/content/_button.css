@@ -1,0 +1,15 @@
+/* ---------------------------------------------------------------------
+button
+------------------------------------------------------------------------ */
+.button {
+    @apply --BUTTON;
+}
+
+.button_mainNav {
+    display: none;
+}
+
+.js .button_mainNav {
+    display: flex; /* Conditionally show if .js is present */
+    padding: 2px 12px;
+}

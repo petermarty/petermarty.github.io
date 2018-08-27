@@ -1,0 +1,24 @@
+---
+layout: default
+title: Blog
+description: "Peter Marty's thoughts, ideas, and experiences about life, the web, and his role within them."
+navigation_title: "Insights"
+weight : 4
+---
+<div class="u-containerSlim u-vrInverse_x4">
+    <h1 class="u-textPageHeadingH1 u-vr_x4">{{page.navigation_title}}</h1>
+
+    <ul>
+        {% for post in site.posts %}
+        <li class="u-vr_x3">
+            <a class="u-textFontSizeMedium u-textColorDark u-textDecorationNoUnderline" href="{{ post.url | prepend: site.baseurl }}">
+                <div class="hList hList_middle u-vr_x1">
+                    <h2>{{ post.title }}</h2>
+                    <span class="u-textColorMedium u-textStyleItalic u-textFontSizeXSmall"> &mdash; {{ post.date | date: "%b %-d, %Y" }}</span>
+                </div>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>

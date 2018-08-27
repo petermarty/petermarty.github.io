@@ -1,0 +1,85 @@
+/* ---------------------------------------------------------------------
+elements
+------------------------------------------------------------------------ */
+html, body {
+    height: 100%; /* page module layout and sticky footer */
+}
+
+/* Establishes some base font styles */
+body {
+    @apply --FONT_FAMILY_PRIMARY;
+    @apply --FONT_SIZE_TEXT_SMALL_TO_MEDIUM;
+    background-color: var(--COLOR_SYSTEM_OPAQUE);
+    color: var(--COLOR_SYSTEM_TEXT_GREY);
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+}
+
+p {
+    line-height: 1.8;
+    & + p {
+        margin-top: 15px;
+    }
+}
+
+a {
+    @apply --LINK_HOVER;
+    color: var(--COLOR_SYSTEM_BLACK);
+    display: inline-block; /* for :focus state */
+    text-decoration: underline;
+    &:hover {
+        color: var(--COLOR_SYSTEM_TEXT_GREY);
+    }
+}
+
+hr {
+    border: .5px solid var(--COLOR_SYSTEM_LIGHT_GREY);
+}
+
+small {
+    font-size: var(--FONT_SIZE_TEXT_XSMALL);
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    appearance: none;
+    /* stylelint-disable */
+    -webkit-appearance: none;
+    /* stylelint-enable */
+    border: none;
+}
+
+select,
+input,
+textarea {
+    border: 1px solid var(--COLOR_SYSTEM_TEXT_GREY);
+}
+
+/* Re-add Focus styles */
+:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+a:focus {
+    outline-offset: 0;
+    outline: 1px dotted var(--COLOR_SYSTEM_BLACK);
+}
+
+input.error:focus,
+textarea.error:focus,
+select.error:focus {
+    outline-offset: 0;
+    outline: 2px solid #000000;
+    box-shadow: 0 0 4px #000000;
+}
+
+::selection {
+    color: var(--COLOR_SYSTEM_OPAQUE);
+    background-color: var(--COLOR_BRAND_PRIMARY);
+}

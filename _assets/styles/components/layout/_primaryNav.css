@@ -1,0 +1,83 @@
+/* Configurable Variables */
+:root {
+    --primaryNav_MOBILE_SPACING: 10px;
+    --primaryNav_SPACING: 20px;
+    --primaryNav_STATE_SPACING: 8px;
+    --primaryNav_BORDER_WEIGHT: 2px;
+}
+
+.js .primaryNav {
+    display: none; /* Conditionally hide if .js is present */
+    @media (--medium) {
+        display: flex;
+        flex-direction: row;
+    }
+    &.isActive {
+        display: block;
+        left: 0;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        @media (--medium) {
+            position: inherit;
+            width: auto;
+        }
+    }
+}
+
+.primaryNav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    @media (--medium) {
+        flex-direction: row;
+        justify-content: start;
+    }
+}
+
+
+.primaryNav-list > * {
+    border-bottom: 1px solid var(--COLOR_SYSTEM_TEXT_GREY);
+    @media (--medium) {
+        border-bottom: none;
+        display: flex;
+        padding: 0; /* resets base object styling */
+    }
+}
+
+@media (--medium) {
+    .primaryNav-list > * + * {
+        margin-left: var(--primaryNav_SPACING);
+    }
+}
+
+.primaryNav-list a {
+    @apply --FONT_FAMILY_SECONDARY;
+    background-color: var(--COLOR_SYSTEM_OPAQUE);
+    box-sizing: border-box;
+    color: var(--COLOR_SYSTEM_TEXT_GREY);
+    display: block;
+    font-size: calc(var(--FONT_SIZE_TEXT_SMALL));
+    letter-spacing: .5px;
+    padding: var(--primaryNav_MOBILE_SPACING);
+    text-decoration: none; /* overwrites anchor element default styling */
+    transition: none; /* Resets element anchor base style */
+    @media (--medium) {
+        background-color: transparent;
+        font-size: calc(var(--FONT_SIZE_TEXT_MEDIUM) - 2px);
+        padding: 0;
+    }
+    &:hover,
+    &.isActive {
+        @media (--medium) {
+            border-bottom: var(--primaryNav_BORDER_WEIGHT) solid var(--COLOR_BRAND_SECONDARY);
+            color: var(--COLOR_SYSTEM_BLACK);
+            margin-bottom: -var(--primaryNav_BORDER_WEIGHT); /* reset for border so does not push content down */
+        }
+    }
+    &.isActive:hover {
+        color: var(--COLOR_SYSTEM_CHARCOAL_GREY);
+        cursor: default;
+    }
+}

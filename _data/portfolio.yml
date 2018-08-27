@@ -1,0 +1,40 @@
+# Portfolio page data for the Portfolio archive page
+
+# Portfolio Work Projects
+  - name: petermarty.design
+    # Keep at a minimum character count for responsive break at small
+    excerpt: Our personal business website represents Peter Marty Design&apos;s purpose and service offerings, with a dash of personality.
+    type: UX / Design / Development
+    featured_image: /assets/media/images/case-study/petermarty/petermarty-homepage.jpg
+    featured_image_alt: Personal business website of Peter Marty Design
+    url: peter-marty-design # Must match page file name
+
+  #
+  # - name: Disability Hub MN
+  #   # Keep at a minimum character count for responsive break at small
+  #   excerpt: A responsive website with Accessibility being our main focus for a service aimed at a target audience with disabilities.
+  #   type: UX / Design / Development
+  #   featured_image: /assets/media/images/case-study/dhmn/dhmn-excerpt.jpg
+  #   featured_image_alt: Disability Hub MN homepage
+  #   url: disability-hub-mn # Must match page file name
+  #
+  # - name: Tangletown Gardens
+  #   excerpt: An easily manageable, informative and interactive WordPress website that incorporates e-commerce for their products and events.
+  #   type: UX / Design / Development
+  #   featured_image: /assets/media/images/case-study/tangletown-gardens/tangletown-gardens-homepage.jpg
+  #   featured_image_alt: Tangletown Gardens Center website homepage
+  #   url: tangletown-gardens # Must match page file name
+  #
+  # - name: Mapps Coffee
+  #   excerpt: A custom designed and developed WordPress website for their ever changing menu alongside a blog for their roastery and events.
+  #   type: UX / Design / Development
+  #   featured_image: /assets/media/images/case-study/mapps-coffee/mapps_menu.jpg
+  #   featured_image_alt: Mapps Coffee website homepage
+  #   url: mapps-coffee # Must match page file name
+  #
+  # - name: Sip Coffeebar
+  #   excerpt: A Flash website becomes a fully custom designed, developed, ground up WordPress site for this modern community focussed coffee bar.
+  #   type: UX / Design / Development
+  #   featured_image: /assets/media/images/case-study/sip-coffeebar/sip-coffeebar-homepage.jpg
+  #   featured_image_alt: Sip Coffeebar website homepage
+  #   url: sip-coffeebar # Must match page file name

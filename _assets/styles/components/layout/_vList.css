@@ -1,0 +1,70 @@
+/* ---------------------------------------------------------------------
+vList
+--------------------------------------------------------------------- */
+/* Configurable vars */
+:root {
+    --vList_SPACE: 10px;
+    --vList_BULLET_SPACE: 24px;
+}
+
+.vList {
+    display: flex;
+    flex-direction: column;
+}
+
+.vList > * + * {
+    margin-top: var(--vList_SPACE);
+}
+
+.vList_half > * + * {
+    margin-top: 5px;
+}
+
+.vList_flat > * + * {
+    margin-top: 0;
+}
+
+.vList_tall > * + * {
+    margin-top: calc(var(--vList_SPACE) * 2);
+}
+
+/* MIXINS */
+.mix-vList_bulleted {
+    margin-left: var(--vList_BULLET_SPACE);
+}
+
+.mix-vList_bulleted > * {
+    list-style-type: disc;
+}
+
+.mix-vList_bordered > * {
+    border-top: 1px solid var(--COLOR_SYSTEM_LIGHT_GREY);
+    margin-top: var(--GLOBAL_SPACING);
+    padding-top: var(--GLOBAL_SPACING);
+    &:first-child {
+        border-top: 0;
+        margin-top: 0;
+    }
+    @media (--medium) {
+        margin-top: calc(var(--GLOBAL_SPACING) * 2);
+        padding-top: calc(var(--GLOBAL_SPACING) * 2);
+    }
+}
+
+.mix-vList_flare > * {
+    align-items: center;
+    padding-left: var(--vList_BULLET_SPACE);
+    position: relative; /* Reference for pseudo object */
+    &:before {
+        background: var(--COLOR_BRAND_SECONDARY);
+        border-radius: 100%;
+        content: '';
+        display: block;
+        height: 10px;
+        margin-left: -var(--vList_BULLET_SPACE);
+        position: absolute; /* Relative to base object class */
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px;
+    }
+}

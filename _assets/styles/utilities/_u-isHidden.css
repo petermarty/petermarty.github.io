@@ -1,0 +1,65 @@
+/* ---------------------------------------------------------------------
+u-isHidden
+------------------------------------------------------------------------ */
+:root {
+    --isVisuallyHidden: {
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        border: 0 !important;
+        position: absolute !important;
+        clip: rect(0 0 0 0) !important;
+        overflow: hidden !important;
+    };
+
+    --isVisuallySeen: {
+        width: auto !important;
+        height: auto !important;
+        padding: initial !important;
+        margin: auto !important;
+        border: initial !important;
+        position: static !important;
+        clip: rect(auto auto auto auto) !important;
+        overflow: auto !important;
+    };
+
+    --isHidden: {
+        display: none !important;
+    };
+}
+
+.u-isHidden {
+    @apply --isHidden;
+}
+
+.u-isVisuallyHidden {
+    @apply --isVisuallyHidden;
+}
+
+.u-isHiddenXSmall {
+    @apply --isHidden;
+    @media(--small) {
+        display: block!important;
+    }
+}
+
+.u-isHiddenSmall {
+    @apply --isHidden;
+    @media(--medium) {
+        display: block!important;
+    }
+}
+
+.u-isHiddenSmallMedium {
+    @apply --isHidden;
+    @media(--medium) {
+        display: block!important;
+    }
+}
+
+.u-isHiddenMedium {
+    @media(--medium) {
+        @apply --isHidden;
+    }
+}

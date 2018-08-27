@@ -1,0 +1,60 @@
+/* ---------------------------------------------------------------------
+media
+- Most of the magic happens at medium size breakpoint
+------------------------------------------------------------------------ */
+:root {
+    --media_SPACE: 40px;
+}
+
+.media {
+    background-color: var(--COLOR_SYSTEM_LIGHTEST_GREY);
+    display: flex;
+    flex-direction: column;
+    @media (--medium) {
+        flex-direction: row;
+    }
+}
+
+.media_middle {
+    @media (--medium) {
+        align-items: center;
+    }
+}
+
+.media_equalSplit > * {
+    @media (--medium) {
+        flex-basis: 50%;
+    }
+}
+
+.media > * {
+    vertical-align: top;
+}
+
+.media-feature {
+    font-size: 0; /* Reset hack for trailing white-space */
+}
+
+.media_flipped .media-feature {
+    order: 2;
+}
+
+.media_flipped .media-bd {
+    order: 1;
+}
+
+.media-bd {
+    flex-grow: 1;
+    padding: var(--GLOBAL_SPACING);
+    @media (--medium) {
+        padding: var(--media_SPACE);
+        box-sizing: border-box;
+    }
+}
+
+.mix-media_flip {
+    flex-direction: column;
+    @media (--medium) {
+        flex-direction: row;
+    }
+}

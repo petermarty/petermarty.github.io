@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    {% include head.html %}
+    <body itemscope itemtype="http://schema.org/WebPage">
+        <div class="page page_bordered">
+            <header class="page-hd" role="banner">
+                <a class="u-isVisuallyHidden" href="#mainContent">Skip to main content</a>
+                {% include header.html %}
+            </header> <!-- ./page-hd -->
+            <div class="page-bd">
+                <main role="main">
+                    <div id="mainContent">
+                        {{ content }}
+                    </div>
+                </main>
+            </div> <!-- ./page-bd -->
+            <footer class="page-ft u-container">
+                {% include footer.html %}
+            </footer> <!-- ./page-ft -->
+        </div> <!-- ./page -->
+    </body>
+</html>

@@ -1,0 +1,21 @@
+/* ---------------------------------------------------------------------
+feature
+------------------------------------------------------------------------ */
+.feature {
+    height: 100%;
+}
+
+.feature-bd {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+
+.feature-meta {
+    margin-bottom: 10px;
+    @media (--medium) {
+        margin-bottom: 0; /* reset for base styling */
+    }
+}

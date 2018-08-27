@@ -1,0 +1,57 @@
+# OS files #
+############
+._*
+.DS_Store
+.DS_Store?
+._.DS_Store
+.LSOverride
+.Trashes
+.*.swp
+.tmp/
+*.orig
+
+# Caches and logs and auto generated #
+######################################
+.sass-cache
+*.log
+*.css.map
+
+# IDEs and Editors #
+####################
+.idea/
+.atom
+.editorconfig
+
+# For Jekyll #
+#############
+_site/
+
+# Environment-dependent files #
+###############################
+
+# Front End #
+# Excluding FE build until ready for prime time
+#############
+env/
+tasks/
+tools/
+gulpfile.js
+docs
+node_modules/
+yarn-error.log
+tools/node/
+.eslintrc
+.eslintignore
+.eslintrc
+.stylelintrc
+.yo-rc.json
+build.sh
+build.cmd
+node-install.cmd
+node-install.sh
+package-lock.json
+package.json
+
+# Personal #
+############
+env/local.env

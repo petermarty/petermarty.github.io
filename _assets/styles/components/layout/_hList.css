@@ -1,0 +1,25 @@
+/* ---------------------------------------------------------------------
+hList
+--------------------------------------------------------------------- */
+:root {
+    --hList_SPACE: 10px;
+}
+
+.hList {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hList > * + * {
+    margin-left: var(--hList_SPACE);
+}
+
+.hList_middle {
+    align-items: center;
+}
+
+.mix-hList_pipe > * + *:before {
+    align-items: center;
+    content: '|';
+    padding-right: 10px;
+}

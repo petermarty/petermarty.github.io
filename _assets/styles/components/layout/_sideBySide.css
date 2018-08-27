@@ -1,0 +1,30 @@
+/* ---------------------------------------------------------------------
+sideBySide
+* For objects with no more than two direct descendants
+* If object contains more than two direct descendants use hList
+--------------------------------------------------------------------- */
+:root {
+    --sideBySide_SPACE: 8px;
+}
+
+.sideBySide {
+    align-items: center;
+    display: flex;
+}
+
+.sideBySide > * + * {
+    margin-left: var(--sideBySide_SPACE);
+}
+
+/* Mixins */
+.mix-sideBySide_grow {
+    width: 100%;
+}
+
+.mix-sideBySide_grow >:first-child {
+    flex-grow: 1;
+}
+
+.mix-sideByside_topAlign {
+    align-items: flex-start;
+}

@@ -1,0 +1,110 @@
+/* ---------------------------------------------------------------------
+blocks
+* Flexbox is used so direct descendants are equal height.
+------------------------------------------------------------------------ */
+:root {
+    --blocks-SPACE: 20px;
+}
+
+.blocks {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0; /* fallback for elements to be side by side */
+    margin-left: calc(var(--blocks-SPACE) * -1); /* Offset children spacing to be flush with containing element */
+    margin-top: calc(var(--blocks-SPACE) * -1); /* Offset children spacing to be flush with containing element */
+}
+
+.blocks > * {
+    box-sizing: border-box;
+    overflow: hidden;
+    padding-left: var(--blocks-SPACE);
+    padding-top: var(--blocks-SPACE);
+    vertical-align: top;
+    width: 100%;
+    font-size: var(--FONT_SIZE_TEXT_MEDIUM); /* reset */
+}
+
+/* -- BLOCKS - 1-4 -- */
+@for $i from 1 to 4 {
+    .blocks_$(i)up > * {
+        width: calc(100% / $(i));
+    }
+
+    /* Small 1-4 */
+    @media (--small) {
+        .blocks_$(i)upSmall > * {
+            width: calc(100% / $(i));
+        }
+    }
+
+    /*  Medium 1-4 */
+    @media (--medium) {
+        .blocks_$(i)upMedium > * {
+            width: calc(100% / $(i));
+        }
+    }
+
+    /*  Large 1-4 */
+    @media (--large) {
+        .blocks_$(i)upLarge > * {
+            width: calc(100% / $(i));
+        }
+    }
+}
+
+/* ------ MIXINS ------ */
+.mix-blocks_flexChildren > * {
+    display: flex; /* Allows the children of block items to fill the space */
+    flex-direction: column;
+}
+
+.mix-blocks_bordered,
+.mix-blocks_borderedVertical {
+    margin-left: calc((var(--blocks-SPACE) / 2) * -1); /* Offset children spacing to be flush with containing element */
+    margin-top: calc((var(--blocks-SPACE) / 2) * -1); /* Offset children spacing to be flush with containing element */
+}
+
+.mix-blocks_bordered > * {
+    padding: calc(var(--blocks-SPACE) / 2);
+}
+
+.mix-blocks_bordered > * + * {
+    border-top: 1px solid var(--COLOR_SYSTEM_CHARCOAL_GREY);
+    @media (--medium) {
+        border-left: 1px solid var(--COLOR_SYSTEM_CHARCOAL_GREY);
+        border-top: none; /* Resets base border */
+    }
+}
+
+.mix-blocks_borderedVertical > * {
+    border-bottom: 1px solid var(--COLOR_SYSTEM_CHARCOAL_GREY);
+}
+
+.mix-blocks_spaceBetween {
+    margin-top: 0;
+    @media (--medium) {
+        margin-top: 0;
+    }
+}
+
+.mix-blocks_spaceBetween > * {
+    padding-left: var(--blocks-SPACE);
+    & + * {
+        margin-top: var(--blocks-SPACE);
+    }
+    @media (--medium) {
+        margin-top: var(--blocks-SPACE);
+    }
+}
+
+.mix-blocks_fluffy > * {
+    padding: var(--blocks-SPACE) 0;
+}
+
+/* Reset - Keep at the bottom */
+.mix-blocks_flat {
+    margin: 0;
+    & > * {
+        margin: 0;
+    }
+}

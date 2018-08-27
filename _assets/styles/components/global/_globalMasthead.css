@@ -1,0 +1,21 @@
+/* ---------------------------------------------------------------------
+globalMasthead
+------------------------------------------------------------------------ */
+:root {
+    --globalMasthead_TOP_SPACE: 20px;
+    --globalMasthead_BOTTOM_SPACE: 10px;
+}
+
+.globalMasthead {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.globalMasthead-hd {
+    padding-bottom: var(--globalMasthead_BOTTOM_SPACE);
+    padding-top: var(--globalMasthead_TOP_SPACE);
+    @media (--small) {
+        display: flex;
+        justify-content: space-between;
+    }
+}

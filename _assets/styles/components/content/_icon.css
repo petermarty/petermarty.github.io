@@ -1,0 +1,57 @@
+/* ---------------------------------------------------------------------
+ icon
+---------------------------------------------------------------------- */
+/* Configurable Variables */
+:root {
+    --icon_SIZE: 20px;
+    --icon_LOGO_SIZE: 28px;
+    --icon_SOCIAL_PADDING: 4px;
+}
+
+.icon {
+    @apply --IMAGE_REPLACEMENT; /* for accessibility */
+}
+
+.icon_social {
+    @apply --LINK_HOVER;
+    background-color: var(--COLOR_SYSTEM_CHARCOAL_GREY);
+    border: 2px solid var(--COLOR_SYSTEM_BLACK);
+    border-radius: var(--BORDER_RADIUS_GLOBAL);
+    fill: var(--COLOR_SYSTEM_OPAQUE); /* default fallback */
+    height: var(--icon_SIZE);
+    padding: var(--icon_SOCIAL_PADDING);
+    width: var(--icon_SIZE);
+    &:hover {
+        background-color: var(--COLOR_SYSTEM_OPAQUE);
+        border: 2px solid var(--COLOR_BRAND_PRIMARY);
+        fill: var(--COLOR_BRAND_PRIMARY);
+    }
+}
+
+.icon_logo {
+    background-color: transparent;
+    fill: none;
+    stroke: var(--COLOR_SYSTEM_CHARCOAL_GREY);
+    height: var(--icon_LOGO_SIZE);
+    width: var(--icon_LOGO_SIZE);
+}
+
+a:hover .mix-icon_logo_brand {
+    background-color: transparent;
+    fill: transparent;
+}
+
+.icon_strategy {
+    height: 200px;
+    width: 120px;
+}
+
+.icon_design {
+    height: 200px;
+    width: 220px;
+}
+
+.icon_development {
+    height: 200px;
+    width: 220px
+}

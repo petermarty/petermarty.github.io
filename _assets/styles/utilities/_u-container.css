@@ -1,0 +1,25 @@
+/* ---------------------------------------------------------------------
+u-container
+------------------------------------------------------------------------ */
+/* Configurable Vars */
+:root {
+    --container_SLIM: 740px;
+}
+
+.u-container {
+    @apply --CONTAINER;
+}
+
+.u-containerSlim {
+    margin: 0 auto;
+    max-width: var(--container_SLIM);
+    padding: 0 var(--GLOBAL_SPACING);
+}
+
+.u-containerHeader {
+    margin: 0 auto;
+    padding: 0 calc(var(--GLOBAL_SPACING) / 2);
+    @media (--medium) {
+        @apply --CONTAINER;
+    }
+}

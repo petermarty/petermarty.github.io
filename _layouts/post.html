@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+    {% include head.html %}
+
+    <body itemscope itemtype="http://schema.org/WebPage">
+        <div class="page page_bordered">
+            <header class="page-hd" role="banner">
+                <a class="u-isVisuallyHidden" href="#mainContent">Skip to main content</a>
+
+                {% include header.html %}
+
+            </header>
+            <div class="page-bd">
+                <main role="main">
+
+                    <div id="mainContent" class="u-containerSlim u-vrInverse_x4">
+
+                        <article  itemscope itemType="http://schema.org/BlogPosting" role="article">
+                            <h1 class="u-textPageHeadingH1 u-vr_x8" itemprop="headline">{{ page.title }}</h1>
+                            <div class="u-vr_x4">
+                                {% include breadcrumbs.html %}
+                            </div>
+
+                            {{ content }}
+
+                        </article>
+
+                    </div>
+
+                </main>
+            </div>
+            <footer class="page-ft u-container">
+
+                {% include footer.html %}
+
+            </footer>
+        </div>
+    </body>
+</html>

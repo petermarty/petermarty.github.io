@@ -1,0 +1,21 @@
+/* ---------------------------------------------------------------------
+u-specialEffect
+------------------------------------------------------------------------ */
+/* Not useable for inline elements */
+.u-specialEffectShadow {
+    @apply --LINK_HOVER;
+    display: block; /* for anchor elements */
+    &:hover {
+        box-shadow: 1px 4px 9px var(--COLOR_HIGHLIGHT_SHADOW);
+    }
+}
+
+.u-specialEffectBorderRadius {
+    border-radius: var(--BORDER_RADIUS_GLOBAL);
+}
+
+.u-specialEffectBorderLight {
+    border: 6px solid var(--COLOR_SYSTEM_LIGHT_GREY);
+    box-sizing: border-box;
+    line-height: 0; /* hack to remove vertical white space on images */
+}

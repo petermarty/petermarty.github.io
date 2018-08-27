@@ -1,0 +1,37 @@
+/* ---------------------------------------------------------------------
+imageFlare
+---------------------------------------------------------------------- */
+/* Configurable vars */
+:root {
+    --imageFlare_SMALL_MAX_WIDTH: 260px;
+    --imageFlare_BORDER_WIDTH: 2px;
+    --imageFlare_OFFSET: 10px;
+}
+
+.imageFlare {
+    position: relative;
+    line-height: 0; /* resets vertical trailing white space */
+    & > * {
+        position: relative; /* for setting z-index */
+        z-index: 100;
+    }
+    &:after {
+        background-color: transparent;
+        border: var(--imageFlare_BORDER_WIDTH) solid var(--COLOR_BRAND_TERTIARY);
+        content: '';
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        top: calc(var(--imageFlare_OFFSET) - var(--imageFlare_BORDER_WIDTH));
+        transform: translateX(calc(var(--imageFlare_OFFSET) - 50%));
+        width: 100%;
+        z-index: 90; /* Sets below image */
+    }
+}
+
+.imageFlare_small:after {
+    content: '';
+    max-height: var(--imageFlare_SMALL_MAX_WIDTH);
+    width: var(--imageFlare_SMALL_MAX_WIDTH); /* Overwrites base object */
+}

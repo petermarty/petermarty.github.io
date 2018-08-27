@@ -1,0 +1,267 @@
+/* ---------------------------------------------------------------------
+Vars
+------------------------------------------------------------------------ */
+/* Main Media Queries */
+/* ------------------------------------------- */
+@custom-media --small (width > 480px);
+
+@custom-media --medium (width >= 768px);
+
+@custom-media --large (width > 960px);
+
+/*-- Development - Break Point Listener to be viewed in inspector --*/
+body:after {
+    @apply --isVisuallyHidden;
+}
+
+@media (--small) {
+    body:after {
+        content: 'screen_small';
+    }
+}
+
+@media (--medium) {
+    body:after {
+        content: 'screen_medium';
+    }
+}
+
+@media (--large) {
+    body:after {
+        content: 'screen_large';
+    }
+}
+
+/* Measurements */
+/* ------------------------------------------- */
+:root {
+    --SITE_CONTENT_ARTICLE_WIDTH: 840px;
+    --SITE_CONTENT_MAX_WIDTH: 1140px;
+    --COLUMN_SPACING: 20px;
+    --GLOBAL_SPACING: 20px;
+    --MEGA_MENU_SPACING: 9px;
+    --BTN_Y_PADDING: 8px;
+    --BTN_X_PADDING: 12px;
+}
+
+/* Colors */
+/* ------------------------------------------- */
+:root {
+    /* Primary Palette Colors */
+    --COLOR_BRAND_PRIMARY: rgb(44, 124, 177);
+    --COLOR_BRAND_SECONDARY: rgb(0, 154, 151);
+    --COLOR_BRAND_TERTIARY: rgb(74, 182, 126);
+
+    /* Highlight Colors */
+    --COLOR_HIGHLIGHT_SHADOW: rgb(210, 210, 210);
+
+    /* Grey Colors and their variants */
+    --COLOR_SYSTEM_LIGHTEST_GREY: rgb(245, 245, 245);
+    --COLOR_SYSTEM_LIGHT_GREY: rgb(222, 222, 222);
+    --COLOR_SYSTEM_MEDIUM_GREY: rgb(122, 122, 122);
+    --COLOR_SYSTEM_TEXT_GREY: rgb(84, 82, 81);
+    --COLOR_SYSTEM_CHARCOAL_GREY: rgb(51, 51, 51);
+    --COLOR_SYSTEM_BLACK: rgb(0, 0, 0);
+    --COLOR_SYSTEM_OPAQUE: rgb(255, 255, 255);
+
+    /* Theme colors */
+    --COLOR_FLARE_GRADIENT: linear-gradient(270deg, var(--COLOR_BRAND_PRIMARY) 0%, var(--COLOR_BRAND_SECONDARY) 50%, var(--COLOR_BRAND_TERTIARY) 100%);
+}
+
+/* Fonts */
+/* ------------------------------------------- */
+:root {
+    /* Font Weights */
+    --FONT_WEIGHT_NORMAL: 400; /* Also set as default font faces used */
+    --FONT_WEIGHT_BOLD: 700; /* Need to set per use case to overwrite Normal */
+
+    /* Font Family - Currently same as body but seperate for future change */
+    --FONT_FAMILY_PRIMARY: {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: var(--FONT_WEIGHT_NORMAL);
+    };
+
+    --FONT_FAMILY_SECONDARY: {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: var(--FONT_WEIGHT_NORMAL);
+    };
+
+    /* Font Sizes */
+    --FONT_SIZE_TEXT_XXSMALL: 1px;
+    --FONT_SIZE_TEXT_XSMALL: 14px;
+    --FONT_SIZE_TEXT_SMALL: 16px;
+    --FONT_SIZE_TEXT_MEDIUM: 19px;
+    --FONT_SIZE_TEXT_LARGE: 22px;
+    --FONT_SIZE_TEXT_XLARGE: 26px;
+    --FONT_SIZE_TEXT_XXLARGE: 30px;
+    --FONT_SIZE_TEXT_XXXLARGE: 42px;
+
+    /* Resizable Variants */
+    --FONT_SIZE_TEXT_XXSMALL_TO_SMALL: {
+        font-size: var(--FONT_SIZE_TEXT_XXSMALL);
+        @media (--small) {
+            font-size: var(--FONT_SIZE_TEXT_SMALL);
+        }
+    };
+    --FONT_SIZE_TEXT_XSMALL_TO_MEDIUM: {
+        font-size: var(--FONT_SIZE_TEXT_XSMALL);
+        @media (--small) {
+            font-size: var(--FONT_SIZE_TEXT_MEDIUM);
+        }
+    };
+    --FONT_SIZE_TEXT_SMALL_TO_MEDIUM: {
+        font-size: var(--FONT_SIZE_TEXT_SMALL);
+        @media (--medium) {
+            font-size: var(--FONT_SIZE_TEXT_MEDIUM);
+        }
+    };
+    --FONT_SIZE_TEXT_SMALL_TO_LARGE: {
+        font-size: var(--FONT_SIZE_TEXT_SMALL);
+        @media (--medium) {
+            font-size: var(--FONT_SIZE_TEXT_LARGE);
+        }
+    };
+    --FONT_SIZE_TEXT_SMALL_TO_XLARGE: {
+        font-size: var(--FONT_SIZE_TEXT_SMALL);
+        @media (--medium) {
+            font-size: var(--FONT_SIZE_TEXT_XLARGE);
+        }
+    };
+    --FONT_SIZE_TEXT_MEDIUM_TO_LARGE: {
+        font-size: var(--FONT_SIZE_TEXT_MEDIUM);
+        @media (--medium) {
+            font-size: var(--FONT_SIZE_TEXT_LARGE);
+        }
+    };
+    --FONT_SIZE_TEXT_MEDIUM_TO_XLARGE: {
+        font-size: var(--FONT_SIZE_TEXT_MEDIUM);
+        @media (--medium) {
+            font-size: var(--FONT_SIZE_TEXT_XLARGE);
+        }
+    };
+    --FONT_SIZE_TEXT_LARGE_TO_XXLARGE: {
+        font-size: var(--FONT_SIZE_TEXT_LARGE);
+        @media (--medium) {
+            font-size: var(--FONT_SIZE_TEXT_XXLARGE);
+        }
+    };
+    --FONT_SIZE_TEXT_XLARGE_TO_XXLARGE: {
+        font-size: var(--FONT_SIZE_TEXT_XLARGE);
+        @media (--medium) {
+            font-size: var(--FONT_SIZE_TEXT_XXLARGE);
+        }
+    };
+    --FONT_SIZE_TEXT_XLARGE_TO_XXXLARGE: {
+        font-size: var(--FONT_SIZE_TEXT_XLARGE);
+        @media (--medium) {
+            font-size: var(--FONT_SIZE_TEXT_XXXLARGE);
+        }
+    }
+    --FONT_SIZE_TEXT_XXLARGE_TO_XXXLARGE: {
+        font-size: var(--FONT_SIZE_TEXT_XXLARGE);
+        @media (--medium) {
+            font-size: var(--FONT_SIZE_TEXT_XXXLARGE);
+        }
+    }
+}
+
+/* Z-Indexes */
+/* ------------------------------------------- */
+:root {
+    --ZINDEX_FIXED_PAGE_HD: 100; /* Sets above hero */
+    --ZINDEX_FIXED_PAGE_BD: 90; /* Sets above hero */
+}
+
+/* Transitions */
+/* ------------------------------------------- */
+:root {
+    --TRANSITION_TIMING: 0.4s;
+}
+
+:root {
+    --IMAGE_REPLACEMENT: {
+        overflow: hidden;
+        text-indent: 100%;
+        white-space: nowrap;
+        direction: rtl;
+        *text-indent: 0;
+        *font-size: 0;
+    };
+}
+
+/* Button Base Styles
+   - Override as necessary in button.css object*/
+/* ------------------------------------------- */
+:root {
+    --BUTTON: {
+        @apply --LINK_HOVER;
+        @apply --FONT_FAMILY_SECONDARY;
+        align-items: center;
+        appearance: none;
+        background-color: transparent;
+        border: 1px solid var(--COLOR_SYSTEM_CHARCOAL_GREY); /* resets default browser styles */
+        border-radius: var(--BORDER_RADIUS_GLOBAL);
+        box-sizing: border-box;
+        color: var(--COLOR_SYSTEM_CHARCOAL_GREY);
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        font-size: var(--FONT_SIZE_TEXT_SMALL);
+        font-weight: var(--FONT_WEIGHT_BOLD);
+        justify-content: space-around;
+        padding: var(--BTN_Y_PADDING) var(--BTN_X_PADDING);
+        -webkit-appearance: none;
+        text-align: center;
+        text-decoration: none; /* for use on anchor elements */
+        transition: all var(--TRANSITION_TIMING) ease;
+        width: fit-content;
+        &:hover {
+            animation: gradientAnimation 3s linear infinite;
+            background: var(--COLOR_FLARE_GRADIENT);
+            background-size: 200% 200%;
+            border: 1px solid transparent; /* overwrites base object */
+            color: var(--COLOR_SYSTEM_OPAQUE);
+        }
+    };
+}
+
+/* Layout */
+/* ------------------------------------------- */
+:root {
+    --CONTAINER {
+        max-width: var(--SITE_CONTENT_MAX_WIDTH);
+        margin: 0 auto;
+        padding: 0 var(--GLOBAL_SPACING);
+    }
+}
+
+/* Clearfix */
+/* ------------------------------------------- */
+:root {
+    --clearfix {
+        &::before,
+        &::after {
+            content: '';
+            display: table;
+        }
+        &::after {
+            clear: both;
+        }
+    }
+}
+
+/* Effects */
+/* ------------------------------------------- */
+:root {
+    --LINK_HOVER: {
+        transition: all var(--TRANSITION_TIMING) ease;
+    }
+
+    --BORDER_RADIUS_GLOBAL: 5px;
+}
+
+@keyframes gradientAnimation {
+    0%{background-position:0 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0 50%}
+}

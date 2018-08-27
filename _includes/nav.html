@@ -1,0 +1,16 @@
+<div class="u-isHiddenMedium">
+    <button class="button button_mainNav" data-nav-toggle-target-id="#js-headerMainNav">Menu</button>
+</div>
+<nav id="js-headerMainNav" class="primaryNav" role="navigation" aria-label="main navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <ul class="primaryNav-list">
+        {% for weight in (1..10) %}
+            {% for this in site.pages %}
+                {% if this.weight == weight %}
+                <li itemprop="url">
+                    <a class="u-textLineHeightTall{% if this.url == page.url %} isActive{% endif %}" href="{{ this.url }}">{{ this.navigation_title }}</a>
+                </li>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </ul> <!-- /.primaryNav-list -->
+</nav> <!-- /.primaryNav -->

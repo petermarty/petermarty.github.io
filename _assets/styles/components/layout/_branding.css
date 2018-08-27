@@ -1,0 +1,34 @@
+/* ---------------------------------------------------------------------
+branding
+--------------------------------------------------------------------- */
+/* Configurable Vars */
+:root {
+    --branding_LOGO_SIZE: 40px;
+    --branding_LOGO_SPACING: 8px;
+}
+
+.branding {
+    align-items: center;
+    display: inline-flex;
+}
+
+.branding-name {
+    padding-left: calc(var(--branding_LOGO_SPACING) + var(--branding_LOGO_SIZE));
+    position: relative;
+    &:before {
+        @apply --LINK_HOVER;
+        background-image: url('/assets/media/images/branding/peterMartyDesign-logo.svg');
+        background-repeat: no-repeat;
+        background-size: var(--branding_LOGO_SIZE);
+        content: '';
+        height: var(--branding_LOGO_SIZE);
+        left: 0;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: var(--branding_LOGO_SIZE);
+    }
+    &:hover:before {
+        background-image: url('/assets/media/images/branding/peterMartyDesign-logo-hover.svg');
+    }
+}
