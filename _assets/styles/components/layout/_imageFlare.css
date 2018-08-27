@@ -33,5 +33,5 @@ imageFlare
 .imageFlare_small:after {
     content: '';
     max-height: var(--imageFlare_SMALL_MAX_WIDTH);
-    width: var(--imageFlare_SMALL_MAX_WIDTH); /* Overwrites base object */
+    max-width: var(--imageFlare_SMALL_MAX_WIDTH); /* Overwrites base object */
 }
