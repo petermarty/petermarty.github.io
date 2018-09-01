@@ -7,14 +7,14 @@ heading: Peter Marty&apos;s Client List
 description: "A list of client's that Peter Marty has worked with to do UX, Front-End Development, Wordpress Development, Project Lead, Project Management, Quality Assurance, Sales, and Consulting work on."
 ---
 <div class="u-container u-vrInverse_x4">
-    {% include breadcrumbs.html %}
+    {%- include breadcrumbs.html -%}
     <div class="u-containerSlim u-textAlignCenter u-vr_x4">
         <h1 class="u-textPageHeadingH1 u-vr_x4">{{ page.heading }}</h1>
         <p class="u-vr_x0">A list of clients we have had the fortune of working with, their industry, and our role on the project.</p>
     </div>
 
     <ul class="vList mix-vList_bulleted">
-    {% for clients in site.data.clients %}
+    {%- for clients in site.data.clients -%}
         <li>
             <h2 class="u-textPageHeadingH3">{{ clients.name }}</h2>
             <div class="u-textFontSizeSmall">
@@ -30,6 +30,6 @@ description: "A list of client's that Peter Marty has worked with to do UX, Fron
                 <span class="u-textColorMedium">{{ clients.role }}</span>
             </div>
         </li>
-    {% endfor %}
+    {%- endfor -%}
     </ul>
 </div>

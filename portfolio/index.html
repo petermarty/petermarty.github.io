@@ -13,7 +13,7 @@ weight : 2
     </div>
 
     <ul class="vList mix-vList_bordered">
-    {% for portfolio in site.data.portfolio %}
+    {%- for portfolio in site.data.portfolio -%}
         <li class="u-specialEffectBorderRadius">
             <a class="u-textDecorationNoUnderline u-textColorDarkComplete u-specialEffectShadow" href="{{ portfolio.url | prepend: site.baseurl }}">
                 <div class="media media_equalSplit">
@@ -34,7 +34,7 @@ weight : 2
                 </div>
             </a>
         </li>
-    {% endfor %}
+    {%- endfor -%}
     </ul>
 
     <div class="u-textAlignCenter u-vrInverse_x8">

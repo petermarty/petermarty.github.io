@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-    {% include head.html %}
+    {%- include head.html -%}
     <body itemscope itemtype="http://schema.org/WebPage">
         <div class="page page_bordered">
 
             <header class="page-hd" role="banner">
                 <a class="u-isVisuallyHidden" href="#mainContent">Skip to main content</a>
-                {% include header.html %}
+                {%- include header.html -%}
             </header> <!-- ./page-hd -->
 
             <div class="page-bd">
@@ -24,9 +24,8 @@
 
                     <div class="u-container">
                         <div class="u-vr_x6">
-                            {% include breadcrumbs.html %}
+                            {%- include breadcrumbs.html -%}
                         </div>
-
                         {{ content }}
                     </div>
 
@@ -35,7 +34,7 @@
             </div> <!-- ./page-bd -->
 
             <footer class="page-ft u-container">
-                {% include footer.html %}
+                {%- include footer.html -%}
             </footer> <!-- ./page-ft -->
 
         </div> <!-- ./page -->
