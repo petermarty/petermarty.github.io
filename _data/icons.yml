@@ -1,13 +1,4 @@
 # Social Icons used in the site footer
-# EMAIL
-  - link: mailto:peter@petermarty.design
-    type: social
-    iconClass: mix-icon_social_email
-    viewBox: 0 64.806 203.76 133.916
-    label: Peter Marty Email
-    name: Peter Marty Email
-    svgPath: <path d="M0,64.806v6.898v9.94v100.238v3.601v13.238h203.76v-13.238v-3.601V81.653v-9.948v-6.898H0z M186.777,170.612l-47.899-41.893l47.899-33.935V170.612z M16.975,94.066l48.519,34.396l-48.519,43.042V94.066z M102.356,133.795 L28.791,81.653h147.177L102.356,133.795z M79.723,138.545l22.542,15.992l0.053,0.083l0.038-0.03l0.03,0.03l0.046-0.083 l22.209-15.72l49.238,43.073H30.856L79.723,138.545z"/>
-
 # LINKEDIN
   - link: https://www.linkedin.com/company/peter-marty-design/
     type: social
