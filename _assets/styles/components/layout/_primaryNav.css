@@ -71,13 +71,7 @@
     &:hover,
     &.isActive {
         @media (--medium) {
-            border-bottom: var(--primaryNav_BORDER_WEIGHT) solid var(--COLOR_BRAND_SECONDARY);
-            color: var(--COLOR_SYSTEM_BLACK);
-            margin-bottom: -var(--primaryNav_BORDER_WEIGHT); /* reset for border so does not push content down */
+            @apply --TEXT_DECORATION_UNDERLINE;
         }
-    }
-    &.isActive:hover {
-        color: var(--COLOR_SYSTEM_CHARCOAL_GREY);
-        cursor: default;
     }
 }

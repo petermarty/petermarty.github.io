@@ -260,6 +260,23 @@ body:after {
     --BORDER_RADIUS_GLOBAL: 5px;
 }
 
+:root {
+    --TEXT_DECORATION_UNDERLINE: {
+        display: inline-block;
+        position: relative; /* reference for the pseudo element */
+        color: var(--COLOR_SYSTEM_BLACK);
+        &:after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            background-color: var(--COLOR_BRAND_SECONDARY);
+        }
+    }
+}
+
 @keyframes gradientAnimation {
     0%{background-position:0 50%}
     50%{background-position:100% 50%}

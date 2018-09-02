@@ -93,20 +93,7 @@ u-text
 }
 
 .u-textDecorationUnderline {
-    display: inline-block;
-    margin-bottom: 10px;
-    padding-bottom: 8px;
-    position: relative;
-    color: var(--COLOR_SYSTEM_TEXT_GREY);
-    &:after {
-        content: '';
-        width: 100%;
-        height: 4px;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        background-color: var(--COLOR_SYSTEM_TEXT_GREY);
-    }
+    @apply --TEXT_DECORATION_UNDERLINE;
 }
 
 /* Text Alignment */
