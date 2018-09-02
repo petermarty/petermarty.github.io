@@ -87,7 +87,7 @@ body:after {
     };
 
     /* Font Sizes */
-    --FONT_SIZE_TEXT_XXSMALL: 1px;
+    --FONT_SIZE_TEXT_XXSMALL: 12px;
     --FONT_SIZE_TEXT_XSMALL: 14px;
     --FONT_SIZE_TEXT_SMALL: 16px;
     --FONT_SIZE_TEXT_MEDIUM: 19px;
