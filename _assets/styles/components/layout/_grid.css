@@ -14,7 +14,6 @@ grid
     .grid-col {
         flex: 1 1 auto;
         position: relative;
-        box-sizing: border-box;
     }
 
     /* Loop over objects with divided class to set basis and width */
@@ -36,7 +35,6 @@ grid
 @media (--medium) {
     .mix-grid_gutters > * {
         padding: 0 calc(var(--COLUMN_SPACING) / 2);
-        box-sizing: border-box;
         &:first-child {
             padding-left: 0;
         }
@@ -47,6 +45,25 @@ grid
 }
 
 .mix-grid_gutters > * + * {
+    margin-top: var(--GLOBAL_SPACING);
+    @media (--medium) {
+        margin-top: 0;
+    }
+}
+
+@media (--medium) {
+    .mix-grid_guttersWide > * {
+        padding: 0 var(--COLUMN_SPACING);
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+.mix-grid_guttersWide > * + * {
     margin-top: var(--GLOBAL_SPACING);
     @media (--medium) {
         margin-top: 0;
@@ -67,7 +84,6 @@ grid
 
 @media (--medium) {
     .mix-grid_gutterFlip > * {
-        box-sizing: border-box;
         padding: 0 calc(var(--COLUMN_SPACING) / 2);
         &:first-child {
             padding-right: 0; /* opposite of DOM order for flip; I know, it's gross */
